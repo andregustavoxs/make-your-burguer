@@ -16,6 +16,10 @@
       {
         "id": 4,
         "tipo": "Integral"
+      },
+      {
+        "id": 5,
+        "tipo": "Brioche"
       }
     ],
     "carnes": [
@@ -34,10 +38,6 @@
       {
         "id": 4,
         "tipo": "Veggie burger"
-      },
-      {
-        "id": 5,
-        "tipo": "Brioche"
       }
     ],
     "opcionais": [
@@ -69,17 +69,40 @@
   },
   "status": [
     {
-      "id": 1,
+      "id": "1",
       "tipo": "Solicitado"
     },
     {
-      "id": 2,
+      "id": "2",
       "tipo": "Em produção"
     },
     {
-      "id": 3,
+      "id": "3",
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "id": "cf46",
+      "nome": "andre",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Tomate"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "90fd",
+      "nome": "ana",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "Solicitado"
+    }
+  ]
 }
