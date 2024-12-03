@@ -103,6 +103,27 @@
         "Tomate"
       ],
       "status": "Solicitado"
+    },
+    {
+      "id": "8a0b",
+      "nome": "andré",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Cebola roxa",
+        "Pepino"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "1bd9",
+      "nome": "gustavo",
+      "carne": "Picanha",
+      "pao": "Brioche",
+      "opcionais": [
+        "Cheddar"
+      ],
+      "status": "Solicitado"
     }
   ]
 }

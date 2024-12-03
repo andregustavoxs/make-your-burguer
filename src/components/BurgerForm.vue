@@ -87,7 +87,6 @@ export default {
         body: dataJson
       })
 
-
       const res = await req.json();
 
       // colocar uma msg de sistema
