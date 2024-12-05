@@ -60,7 +60,6 @@ export default {
   },
   methods: {
     async getIngredientes() {
-      console.log('Passei por aqui')
       const req = await fetch("http://localhost:3000/ingredientes");
       const data = await req.json(); // Converte em um objeto javascript
 
