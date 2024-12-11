@@ -83,47 +83,15 @@
   ],
   "burgers": [
     {
-      "id": "cf46",
-      "nome": "andre",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
+      "nome": "ana",
+      "carne": "Alcatra",
+      "pao": "Italiano Branco",
       "opcionais": [
         "Bacon",
         "Tomate"
       ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "90fd",
-      "nome": "ana",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Cheddar",
-        "Tomate"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "8a0b",
-      "nome": "andré",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Cebola roxa",
-        "Pepino"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "1bd9",
-      "nome": "gustavo",
-      "carne": "Picanha",
-      "pao": "Brioche",
-      "opcionais": [
-        "Cheddar"
-      ],
-      "status": "Solicitado"
+      "status": "Solicitado",
+      "id": 1
     }
   ]
 }
