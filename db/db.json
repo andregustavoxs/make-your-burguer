@@ -83,15 +83,26 @@
   ],
   "burgers": [
     {
+      "nome": "zeca",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "Em produção",
+      "id": 2
+    },
+    {
       "nome": "ana",
       "carne": "Alcatra",
       "pao": "Italiano Branco",
       "opcionais": [
-        "Bacon",
-        "Tomate"
+        "Tomate",
+        "Pepino"
       ],
-      "status": "Solicitado",
-      "id": 1
+      "status": "Finalizado",
+      "id": 3
     }
   ]
 }
