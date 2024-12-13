@@ -70,6 +70,13 @@ export default {
     async createBurger(e) {
       e.preventDefault();
 
+      // Check if required fields are empty
+      if (!this.nome || !this.pao || !this.carne) {
+        this.msg = "Por favor, preencha todos os campos obrigatórios!";
+        setTimeout(() => this.msg = "", 3000);
+        return;
+      }
+
       const data = {
         nome: this.nome,
         carne: this.carne,
@@ -98,7 +105,7 @@ export default {
       this.nome = "";
       this.carne = "";
       this.pao = "";
-      this.opcionais = "";
+      this.opcionais = [];
     }
   },
   mounted() {
@@ -108,70 +115,139 @@ export default {
 </script>
 
 <style scoped>
+#burger-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #222;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #FCBA03;
+  background-color: rgba(252, 186, 3, 0.1);
+  border-radius: 0 4px 4px 0;
+}
+
+input, select {
+  padding: 0.8rem 1rem;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #FCBA03;
+  box-shadow: 0 0 0 3px rgba(252, 186, 3, 0.2);
+}
+
+input::placeholder {
+  color: #999;
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23222' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+#opcionais-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+#opcionais-title {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  width: calc(50% - 0.5rem);
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.checkbox-container:hover {
+  transform: translateY(-2px);
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-container span {
+  margin-left: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.submit-btn {
+  background-color: #222;
+  color: #FCBA03;
+  font-weight: 600;
+  border: 2px solid #222;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #FCBA03;
+  border-color: #FCBA03;
+  color: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(252, 186, 3, 0.2);
+}
+
+@media (max-width: 600px) {
   #burger-form {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  label {
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #222;
-    padding: 5px 10px;
-    border-left: 4px solid #FCBA03;
-  }
-
-  input, select {
-    padding: 5px 10px;
-    width: 300px;
-  }
-
-  #opcionais-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  #opcionais-title {
-    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
   }
 
   .checkbox-container {
-    display: flex;
-    align-items: flex-start;
-    width: 50%;
-    margin-bottom: 20px;
+    width: 100%;
   }
 
-  .checkbox-container span,
-  .checkbox-container input {
-    width: auto;
+  input, select {
+    width: 100%;
   }
-
-  .checkbox-container span {
-    margin-left: 6px;
-    font-weight: bold;
-  }
-
-  .submit-btn {
-    background-color: #222;
-    color: #FCBA03;
-    font-weight: bold;
-    border: 2px solid #222;
-    padding: 10px;
-    font-size: 16px;
-    margin: 0 auto;
-    cursor: pointer;
-    transition: .5s;
-  }
-
-  .submit-btn:hover {
-    background-color: transparent;
-    color: #222;
-  }
+}
 </style>
