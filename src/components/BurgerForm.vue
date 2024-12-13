@@ -82,11 +82,17 @@ export default {
 
       const req = await fetch("http://localhost:3000/burgers", {
         method: "POST",
-        headers: {"Content-Type": "application/json"}, // Indica que o corpo da requisição está no formato JSON.
+        headers: {"Content-Type": "application/json"},
         body: dataJson
       })
 
       const res = await req.json();
+
+      // Colocar uma mensagem de sistema
+      this.msg = "Pedido realizado com sucesso!";
+
+      // Limpar mensagem após 3 segundos
+      setTimeout(() => this.msg = "", 3000);
 
       // limpar os campos
       this.nome = "";

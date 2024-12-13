@@ -73,7 +73,7 @@ export default {
       const res = await req.json();
 
       // colocar uma msg de sistema
-      this.msg = `Pedido removido com sucesso!`;
+      this.msg = `O pedido N° ${id} foi removido com sucesso!`;
 
       // limpar msg
       setTimeout(() => this.msg = "", 3000);
@@ -95,7 +95,7 @@ export default {
       const res = await req.json();
 
       // colocar uma msg de sistema
-      this.msg = `O pedido N ${res.id} foi atualizado para ${res.status}!`;
+      this.msg = `O pedido N° ${res.id} foi atualizado para ${res.status}!`;
 
       // limpar msg
       setTimeout(() => this.msg = "", 3000);
